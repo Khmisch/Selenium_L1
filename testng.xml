@@ -5,6 +5,7 @@
         <classes>
             <class name="cydeo.test.day7.T1_MultipleWindows"/>
             <class name="cydeo.test.day6.T1_AlertPractice"/>
+            <class name="cydeo.test.day6.T4_iFramePractice"/>
         </classes>
     </test>
 </suite>
