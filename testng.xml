@@ -4,7 +4,7 @@
     <test verbose="2" preserve-order="true" name="C:/Users/User/IdeaProject/Selenium_L1/pom.xml">
         <classes>
             <class name="cydeo.test.day7.T1_MultipleWindows"/>
-            <class name="cydeo.test.day6.T1_AlertPractice"/>
+<!--            <class name="cydeo.test.day6.T1_AlertPractice"/>-->
         </classes>
     </test>
 </suite>
