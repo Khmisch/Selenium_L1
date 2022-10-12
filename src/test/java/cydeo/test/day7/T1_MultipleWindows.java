@@ -1,9 +1,11 @@
 package cydeo.test.day7;
 
 import cydeo.utility.WebDriverFactory;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -18,7 +20,8 @@ public class T1_MultipleWindows {
     @BeforeMethod
     public void setUp(){
         // 1. Setup browser
-        driver = WebDriverFactory.getDriver("Chrome");
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
         // 2. Go to webpage
