@@ -25,32 +25,32 @@ public class T1_WebTable_Practice {
         driver.get("https://practice.cydeo.com/web-tables");
     }
 
-
-    @Test
-    public void verifyOrderName(){
-
-        //3. Verify Bob’s name is listed as expected
-        String actualText = driver.findElement(By.xpath("//td[.='Bob Martin']")).getText();   //table[@id='ctl00_MainContent_orderGrid']//td[.='Bob Martin']
-        String expectedText = "Bob Martin";
-        Assert.assertEquals(actualText, expectedText);
-
-        //4. Verify Bob Martin’s order date is as expected
-        WebElement orderDate = driver.findElement(By.xpath("//td[.='Bob Martin']/following-sibling::td[3]")); //table[@id='ctl00_MainContent_orderGrid']//td[.='12/31/2021']  //td[.='Bob Martin']/../td[5]
-        expectedText = "12/31/2021";
-        actualText = orderDate.getText();
-        Assert.assertEquals(actualText, expectedText);
-    }
-
-    @Test
-    public void test2(){
-        String customerOrderDate = WebTableUtils.returnOrderDate(driver,"Alexandra Gray");
-        System.out.println(customerOrderDate);
-    }
-
-    @Test
-    public void test3(){
-        WebTableUtils.orderVerify(driver,"Ned Stark","05/12/2021");
-    }
+//
+//    @Test
+//    public void verifyOrderName(){
+//
+//        //3. Verify Bob’s name is listed as expected
+//        String actualText = driver.findElement(By.xpath("//td[.='Bob Martin']")).getText();   //table[@id='ctl00_MainContent_orderGrid']//td[.='Bob Martin']
+//        String expectedText = "Bob Martin";
+//        Assert.assertEquals(actualText, expectedText);
+//
+//        //4. Verify Bob Martin’s order date is as expected
+//        WebElement orderDate = driver.findElement(By.xpath("//td[.='Bob Martin']/following-sibling::td[3]")); //table[@id='ctl00_MainContent_orderGrid']//td[.='12/31/2021']  //td[.='Bob Martin']/../td[5]
+//        expectedText = "12/31/2021";
+//        actualText = orderDate.getText();
+//        Assert.assertEquals(actualText, expectedText);
+//    }
+//
+//    @Test
+//    public void test2(){
+//        String customerOrderDate = WebTableUtils.returnOrderDate(driver,"Alexandra Gray");
+//        System.out.println(customerOrderDate);
+//    }
+//
+//    @Test
+//    public void test3(){
+//        WebTableUtils.orderVerify(driver,"Ned Stark","05/12/2021");
+//    }
 
     @AfterMethod
     public void tearDownMethod() {
