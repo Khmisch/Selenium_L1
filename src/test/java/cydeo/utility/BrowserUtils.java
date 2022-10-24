@@ -1,7 +1,13 @@
 package cydeo.utility;
 
+import cydeo.test.day10.Driver;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
+import java.time.Duration;
 
 public class BrowserUtils {
     //Methods are static, Because we do not want to create an object to call those methods.
@@ -35,5 +41,10 @@ public class BrowserUtils {
     public static void verifyTitle(WebDriver driver, String expectedTitle) {
         String actualTitle = driver.getTitle();
         Assert.assertEquals(actualTitle, expectedTitle);
+    }
+
+    public static void waitForInvisibilityOf(WebElement element){
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15));
+        wait.until(ExpectedConditions.invisibilityOf(element));
     }
 }

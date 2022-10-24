@@ -8,6 +8,7 @@ import org.testng.annotations.BeforeMethod;
 import java.util.concurrent.TimeUnit;
 
 public abstract class TestBase {
+
     protected WebDriver driver;
 
     @BeforeMethod
@@ -16,9 +17,6 @@ public abstract class TestBase {
         driver = WebDriverFactory.getDriver("Chrome");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-
-        // 2. Go to webpage
-        driver.get("https://practice.cydeo.com/windows");
     }
 
     @AfterMethod
