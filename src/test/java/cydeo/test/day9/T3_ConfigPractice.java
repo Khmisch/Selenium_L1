@@ -11,7 +11,6 @@ public class T3_ConfigPractice extends TestBase {
 
     @Test
     public void google_search_test_properties() {
-
         //2- Go to: https://google.com/
         //driver.get("https://google.com/");
         driver.get(ConfigurationReader.getProperty("url"));
